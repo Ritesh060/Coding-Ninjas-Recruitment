@@ -1,12 +1,15 @@
 import random
 
+#word list for main hangman game
 words = ["ant", "elepphant", "mouse", "horse", "lizard", "yak", "tiger", "eagle", "camel", "pigeon", "hawk", "donkey", "pig", "zebra", "bison", "falcon", "goat", "iguanas", "jackal", "kite", "leopard", "macaw", "ningen", "owl"]
 
+#function for randomly choosing a word from word list
 def word():
     word = random.choice(words)
     return word.upper()
 
 
+#function for displaying state of hangman dependent on number of tries remaining
 def hangman(tries):
     states = ["""                 |--------------
                  |              |
@@ -74,6 +77,7 @@ def hangman(tries):
                 ]
     return states[tries]
 
+#function for checking word and winning status 
 def play(word):
     word_blank  = "_ " * len(word)
     win = False
@@ -131,6 +135,7 @@ def play(word):
         print("You ran out of tries and lost. The word was", word, ".")
 
 
+#function for starting the main game instance
 def play_game():
     u = word()
     play(u)
