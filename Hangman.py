@@ -11,18 +11,17 @@ def hangman(tries):
     states = ["""                 |--------------
                  |              |
                  |              O
-                 |           \  |    /
+                 |           \  |   /
                  |              |
-                 |              /\
+                 |             // \\
                  |   
-                 
-                 """,
+                """,
             """               |-----------------
                |                |
                |                O
                |            \   |  /
                |                |
-               |                /
+               |               //
                |
                                        
                                        """,
@@ -125,7 +124,7 @@ def play(word):
 
         print(hangman(tries))
         print(word_blank)
-        print()
+        print("\n")
     if win:
         print("You won the game!!")
     else:
